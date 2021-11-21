@@ -23,7 +23,7 @@ int main() {
     double volatility;
     cin >> volatility;
     cout << "If it is a call option, enter 0, else enter 1:" << endl;
-    bool flag;
+    bool flag; // determine which price to print
     cin >> flag;
 
     double d1 = blackScholes.D1(assetPrice, strikePrice, rate, maturity, volatility);
