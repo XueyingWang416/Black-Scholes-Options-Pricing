@@ -12,10 +12,10 @@ public:
 
     /**
      * Conditional probability, a gain for the call buyer occurs on two fwo factors occurring at maturity:
-     * 1. The spot has to be above strike price. (Direction)
+     * 1. The spot has to be above strike CallPrice. (Direction)
      * 2. The difference between spot and strike prices at maturity. (Momentum)
-     * @param assetPrice the underlying asset price
-     * @param strikePrice the strike price
+     * @param assetPrice the underlying asset CallPrice
+     * @param strikePrice the strike CallPrice
      * @param rate risk-free rate
      * @param maturity time to maturity (in years)
      * @param volatility volatility of the underlying asset
@@ -26,7 +26,8 @@ public:
     double D2(double d1, double volatility, double maturity);
     BlackScholes(double strikePrice, double assetPrice, double rate, double maturity, double volatility);
     double CDF(double x);
-    double Price();
+    double CallPrice(double assetPrice, double strikePrice, double rate, double maturity, double d1, double d2);
+    double PutPrice(double assetPrice, double strikePrice, double rate, double maturity, double d1, double d2, double callPrice);
 
 private:
     double strikePrice;

@@ -40,4 +40,13 @@ double BlackScholes::CDF(double x) {
     return cdf;
 }
 
+double BlackScholes::CallPrice(double assetPrice, double strikePrice, double rate, double maturity, double d1, double d2) {
+    return assetPrice * CDF(d1) - strikePrice * exp(- rate * maturity) * CDF(d2);
+}
+
+double
+BlackScholes::PutPrice(double assetPrice, double strikePrice, double rate, double maturity, double d1, double d2, double callPrice) {
+    return strikePrice * exp(- rate * maturity) - assetPrice + callPrice;
+}
+
 
