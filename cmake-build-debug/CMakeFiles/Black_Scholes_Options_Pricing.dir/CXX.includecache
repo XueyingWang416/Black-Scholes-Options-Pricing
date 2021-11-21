@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/cherilyn/Desktop/C++/Black-Scholes-Options-Pricing/BlackScholes.cpp
-cmath
--
-BlackScholes.h
-/Users/cherilyn/Desktop/C++/Black-Scholes-Options-Pricing/BlackScholes.h
-
 /Users/cherilyn/Desktop/C++/Black-Scholes-Options-Pricing/BlackScholes.h
 
 /Users/cherilyn/Desktop/C++/Black-Scholes-Options-Pricing/main.cpp
 iostream
 -
+BlackScholes.h
+/Users/cherilyn/Desktop/C++/Black-Scholes-Options-Pricing/BlackScholes.h
 

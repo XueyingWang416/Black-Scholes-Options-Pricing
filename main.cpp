@@ -33,7 +33,7 @@ int main() {
     double putPrice = blackScholes.PutPrice(assetPrice, strikePrice, rate, maturity, d1, d2, callPrice);
 
     if (flag)
-        cout << "The price of put option is:/t" << putPrice << endl;
+        cout << "The price of put option is:\t" << putPrice << endl;
     else
-        cout << "The price of call option is:/t" << callPrice << endl;
+        cout << "The price of call option is:\t" << callPrice << endl;
 }

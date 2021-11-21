@@ -5,4 +5,5 @@ CMakeFiles/Black_Scholes_Options_Pricing.dir/BlackScholes.cpp.o: \
  ../BlackScholes.cpp \
  ../BlackScholes.h
 CMakeFiles/Black_Scholes_Options_Pricing.dir/main.cpp.o: \
+ ../BlackScholes.h \
  ../main.cpp
