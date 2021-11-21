@@ -21,4 +21,23 @@ double BlackScholes::D2(double d1, double volatility, double maturity) {
     return d1 - volatility * sqrt(maturity);
 }
 
+double BlackScholes::CDF(double x) {
+    const double b1 =  0.319381530;
+    const double b2 = -0.356563782;
+    const double b3 =  1.781477937;
+    const double b4 = -1.821255978;
+    const double b5 =  1.330274429;
+    const double p  =  0.2316419;
+    const double c2  =  0.39894228;
+
+    double a = fabs(x);
+    double t = 1.0 / (1.0 + a * p);
+    double b = c2 * exp((-x) * (x / 2.0));
+    double cdf = ((((b5 * t + b4) * t + b3) * t + b2) * t + b1) * t;
+    cdf = 1 - b * cdf;
+    if (x < 0)
+        cdf = 1 - cdf;
+    return cdf;
+}
+
 

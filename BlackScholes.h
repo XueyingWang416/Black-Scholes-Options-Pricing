@@ -25,6 +25,7 @@ public:
     // probability that the option will expire in the money, i.e., spot above strike for a call.
     double D2(double d1, double volatility, double maturity);
     BlackScholes(double strikePrice, double assetPrice, double rate, double maturity, double volatility);
+    double CDF(double x);
     double Price();
 
 private:
